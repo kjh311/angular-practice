@@ -9,14 +9,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="module.js"></script>
   <script src="jquery.js"></script>
+  <script src="factory.js"></script>
+  <script src="service.js"></script>
+  <script src="provider.js"></script>
 </head>
 <body>
 <div>
+
 {{ firstName + " " + lastName }}
 
 
 <!-- {{fac}} -->
-{{doIt()}}
+<div id="demo">{{doIt()}}</div>
+</br>
+<div id="service">{{service()}}</div>
+
 </div>
 
 
