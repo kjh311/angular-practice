@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Angular Practice</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="module.js"></script>
   <script src="jquery.js"></script>
@@ -39,40 +39,46 @@ Select a topic:
 </select>
 </form> -->
 
-    <img class="animated flipInY cat"  ng-show="pic" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/01/24/12/v2-cute-cat-picture.jpg" alt="">
+<div ng-if="myVar">
+<img class="cat animated fadeIn" src="http://justcuteanimals.com/wp-content/uploads/2012/11/cute-animal-baby-hedgehog-smiling-hands-pics.jpg" alt="">
+</div>
+Show pic of baby animal: <input type="checkbox" ng-model="myVar" ng-init="myVar = false">
+</br>
+
+<img class="animated flipInY cat"  ng-show="pic" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/01/24/12/v2-cute-cat-picture.jpg" alt="">
 <div>
 
   <form action="">
-  Check to show a picture of a cat:
-  <input type="checkbox" ng-model="pic">
-</form>
+    Check to show a picture of a cat:
+    <input type="checkbox" ng-model="pic">
+  </form>
 
-    <img class="animated flipInX cat"  ng-show="puppyPic" src="http://images5.fanpop.com/image/photos/31800000/cute-puppy-cute-puppies-31894882-205-245.jpg" alt="">
+  <img class="animated flipInX cat"  ng-show="puppyPic" src="http://images5.fanpop.com/image/photos/31800000/cute-puppy-cute-puppies-31894882-205-245.jpg" alt="">
 
-<form action="">
-  Check to show a picture of a puppy:
-  <input type="checkbox" ng-model="puppyPic">
-</form>
+  <form action="">
+    Check to show a picture of a puppy:
+    <input type="checkbox" ng-model="puppyPic">
+  </form>
 
-<img class="animated rotateIn cat"  ng-show="tigerPic" src="https://s-media-cache-ak0.pinimg.com/originals/7e/f9/b1/7ef9b1ec29620ec6aaca3c61d43ef4a5.jpg" alt="">
+  <img class="animated rotateIn cat"  ng-show="tigerPic" src="https://s-media-cache-ak0.pinimg.com/originals/7e/f9/b1/7ef9b1ec29620ec6aaca3c61d43ef4a5.jpg" alt="">
 
-<form action="">
-  Check to show a picture of a tiger cub:
-  <input type="checkbox" ng-model="tigerPic">
-</form>
+  <form action="">
+    Check to show a picture of a tiger cub:
+    <input type="checkbox" ng-model="tigerPic">
+  </form>
 
-<img class="animated fadeIn cat"  ng-show="monkeyPic" src="https://s-media-cache-ak0.pinimg.com/236x/03/04/a6/0304a6eaba5358999ae9cbf5b2bcb125.jpg" alt="">
+  <img class="animated fadeIn cat"  ng-show="monkeyPic" src="https://s-media-cache-ak0.pinimg.com/236x/03/04/a6/0304a6eaba5358999ae9cbf5b2bcb125.jpg" alt="">
 
-<form action="">
-  Check to show a picture of a monkey:
-  <input type="checkbox" ng-model="monkeyPic">
-</form>
+  <form action="">
+    Check to show a picture of a monkey:
+    <input type="checkbox" ng-model="monkeyPic">
+  </form>
 
-{{ firstName + " " + lastName }}
+  {{ firstName + " " + lastName }}
 
 
-<!-- {{fac}} -->
-<div id="demo">{{doIt()}}</div>
+  <!-- {{fac}} -->
+  <div id="demo">{{doIt()}}</div>
 </br>
 <div id="service">{{service()}}</div>
 
@@ -93,7 +99,7 @@ Select a topic:
       <th>Phone:</th>
     </thead>
     <tbody>
-      <tr ng-repeat="x in items" >
+      <tr ng-repeat="x in items| orderBy : 'name'"   >
         <td>{{x.name | makeUppercase}}</td>
         <td>{{x.username}}</td>
         <td>{{x.email}}</td>
@@ -107,16 +113,16 @@ Select a topic:
 
 
 <p>{{ 1400956671914 | date: 'dd-MM-yyyy'  }}</p>
-  <form  class="simple-form">
-    Name: <input id="input-kev" type="text" name="kevin" ng-model="user.name" /><br />
-    E-mail: <input type="email" ng-model="user.email" /><br />
-    Gender: <input type="radio" ng-model="user.gender" value="male" />male
-    <input type="radio" ng-model="user.gender" value="female" />female<br />
-    <input type="button" ng-click="reset()" value="Reset" />
-    <input id="sub" type="submit" ng-click="update(user)" value="Save" />
-  </form>
-  <pre>user = {{user | json}}</pre>
-  <pre>master = {{master | json}}</pre>
+<form  class="simple-form">
+  Name: <input id="input-kev" type="text" name="kevin" ng-model="user.name" /><br />
+  E-mail: <input type="email" ng-model="user.email" /><br />
+  Gender: <input type="radio" ng-model="user.gender" value="male" />male
+  <input type="radio" ng-model="user.gender" value="female" />female<br />
+  <input type="button" ng-click="reset()" value="Reset" />
+  <input id="sub" type="submit" ng-click="update(user)" value="Save" />
+</form>
+<pre>user = {{user | json}}</pre>
+<pre>master = {{master | json}}</pre>
 <!-- <div class="row"> -->
 
 <!-- {{ user | makeUppercase }} -->
@@ -128,9 +134,9 @@ Select a topic:
 </ul>
 </div> -->
 
- <form>
-    Check to show a header:
-    <input type="checkbox" ng-model="myVar">
+<form>
+  Check to show a header:
+  <input type="checkbox" ng-model="myVar">
 </form>
 
 <h1 ng-show="myVar">My Header</h1>
@@ -138,7 +144,37 @@ Select a topic:
 
 
 
+<form name="form">
+  <label for="maxlength">Set a maxlength: </label>
+  <input type="number" ng-model="maxlength" id="maxlength" />
+  <br>
+  <label for="input">This input is restricted by the current maxlength: </label>
+  <input type="text" ng-model="model" id="input" name="input" ng-maxlength="maxlength" /><br>
+  <hr>
 
+  input valid? = <code>{{form.input.$valid}}</code><br>
+  model = <code>{{model}}</code>
+</form>
+
+<form name="myForm">
+  <input name="myInput" ng-model="myInput" required>
+</form>
+
+<p>The input's valid state is:</p>
+<h1>{{myForm.myInput.$valid}}</h1>
+
+<form name="myForm2">
+  <input name="myInput2" ng-model="myInput2" type="email" placeholder="email">
+</form>
+
+<h1>Valid?:</h1>
+<h5>{{myForm2.myInput2.$valid}}</h5>
+<h1>Invalid?:</h1>
+<h5>{{myForm2.myInput2.$invalid}}</h5>
+
+
+
+<p>{{money | currency : "€"}}</p>
 
 </div>
 </body>

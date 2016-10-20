@@ -77,7 +77,9 @@ $scope.user = 'Todd Motto';
     console.log(put);
 });
 
+$scope.maxlength = 5;
 
+$scope.money = 12343.34;
 
 }]);
 

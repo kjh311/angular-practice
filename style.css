@@ -8,4 +8,13 @@ body{
 .cat{
   width: 30%;
 }
+input.ng-valid{
+  background-color: lightblue;
+}
+input.ng-invalid{
+  background-color: #FFA07A;
+}
+input.ng-pristine{
+  background-color: white;
+}
 
