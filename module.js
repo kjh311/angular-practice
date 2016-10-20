@@ -11,15 +11,15 @@ var app = angular.module("myApp", ['ngResource']);
 });
 
 
-app.controller("myCtrl", ['$scope', '$http', '$location',  'userService', 'kevinService', function($scope, $http, $location, userService, kevinService, other, makeUppercase) {
+app.controller("myCtrl", ['$scope', '$http', '$location',   'userService', 'kevinService',  function($scope, $http, $location, userService, kevinService, other, makeUppercase) {
     $scope.other = other;
 
     $scope.firstName = "John";
     $scope.lastName = "Doe";
 
-    $scope.doIt = function(){
-      userService.firstFunction();
-    }
+    // $scope.doIt = function(){
+    //   userService.firstFunction();
+    // }
     $scope.service = function(){
       kevinService.text();
     }
@@ -38,7 +38,16 @@ app.controller("myCtrl", ['$scope', '$http', '$location',  'userService', 'kevin
 //     return $resource('http://jsonplaceholder.typicode.com/users/:user',{user: "@user"});
 // });
 
+  // var key = userService.keyMaster();
 
+  function MyCtrl($scope, userService) {
+    var key = userService.key;
+    $scope.key = userService.key;
+}
+
+  $http.get("https://api.themoviedb.org/3/movie/76341?api_key="+userService.key+"").success(function(data) {
+    $scope.movieStuff = data;
+  });
 
   $http.get("http://jsonplaceholder.typicode.com/users").success(function(data) {
     $scope.items = data;

@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"  crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="module.js"></script>
   <script src="jquery.js"></script>
@@ -23,12 +23,13 @@
   <script src="service.js"></script>
   <script src="provider.js"></script>
   <script src="directive.js"></script>
+  <script src="key.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.8/angular-resource.js"></script>
 </head>
 <body class="container animated fadeIn">
   {{color}}
   <div  ng-controller="myCtrl">
-
+<!-- {{key}} -->
 <!-- <form>
 Select a topic:
 <select ng-model="pic">
@@ -175,6 +176,13 @@ Show pic of baby animal: <input type="checkbox" ng-model="myVar" ng-init="myVar 
 
 
 <p>{{money | currency : "€"}}</p>
+
+<h1>{{movieStuff.belongs_to_collection.name}}</h1>
+<ul>
+  <li ng-repeat="x in movieStuff">{{x.genres.name}}</li>
+</ul>
+
+<img src="{{movieStuff.belongs_to_collection.backdrop_path}}" alt="">
 
 </div>
 </body>
