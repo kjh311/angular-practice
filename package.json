@@ -1,0 +1,22 @@
+{
+  "name": "angular-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "directive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjh311/angular-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kjh311/angular-practice/issues"
+  },
+  "homepage": "https://github.com/kjh311/angular-practice#readme",
+  "devDependencies": {
+    "ng-resource": "^1.3.2"
+  }
+}
